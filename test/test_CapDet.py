@@ -29,6 +29,15 @@ try:
         results = model(color_image)
         annotated = results[0].plot()
 
+        # Get the axis information of class person
+        for box in results[0].boxes:
+            class_id = int(box.cls[0])
+            if model.names[class_id].lower() == 'person':
+                conf = float(box.conf[0])
+                xyxy = box.xyxy[0].cpu().numpy()
+                central_coordinate = [int((xyxy[0]+xyxy[2])/2), int((xyxy[1]+xyxy[3])/2)]
+                print(f"Class: {model.names[class_id]}, Conf: {conf:.2f}, BBox: {xyxy}, Central Coordinate: {central_coordinate}")
+
         # Display
         cv2.imshow("Color", annotated)
         if cv2.waitKey(1) == 27: #ESC to quit

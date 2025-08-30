@@ -1,13 +1,15 @@
 import pyrealsense2 as rs
 import numpy as np 
 import cv2
+import argparse
 from ultralytics import YOLO
+from math import atan2, sqrt
 
-def find_person(image, model):
+def find_target(image, model, target="person"):
     central_coordinate = None
     for box in image[0].boxes:
         class_id = int(box.cls[0])
-        if model.names[class_id].lower() == "person":
+        if model.names[class_id].lower() == target:
             xyxy = box.xyxy[0].cpu().numpy()
             central_coordinate = [int((xyxy[0]+xyxy[2])/2), int((xyxy[1]+xyxy[3])/2)]
     return central_coordinate
@@ -26,7 +28,40 @@ def person_distance(coordinate, window_size, image):
     roi_distance = float(np.mean(dvals)) if dvals else 0.0
     return roi_distance
 
+def get_polar(coordinate, depth, Z):
+    u, v = coordinate
+
+    # Get intrinsics of the depth stream
+    dprofile = depth.profile.as_video_stream_profile()
+    intr = dprofile.get_intrinsics()
+    fx, fy, cx, cy = intr.fx, intr.fy, intr.ppx, intr.ppy
+
+    # Deproject pixel to 3D camera coordinates
+    X = (u - cx) / fx * Z
+    Y = (v - cy) / fy * Z
+
+    # Polar coordinates
+    r = sqrt(X*X + Y*Y + Z*Z)
+    azimuth = atan2(X, Z)
+    elevation = atan2(-Y, sqrt(X*X + Z*Z))
+
+    return r, azimuth, elevation
+
+def user_input():
+    # Create the parser
+    parser = argparse.ArgumentParser(description="User Input")
+
+    # Add arguments
+    parser.add_argument("-d", "--detect", type=str, help="The class to be detected.", default="person")
+
+    # Parse the arguments
+    args = parser.parse_args()
+    return args.detect
+
 if __name__ == "__main__":
+    # User input
+    detect = user_input()
+
     # Load the YOLO model
     model = YOLO("yolov8n.pt")
 
@@ -38,14 +73,14 @@ if __name__ == "__main__":
 
     # Start the pipeline and get the depth scale
     profile = pipeline.start(config)
-    depth_sensor = profile.get_device().first_depth_sensor()
-    depth_scale = depth_sensor.get_depth_scale() # Scale: meter
+    align = rs.align(rs.stream.color)
 
     try:
         while True:
             frames = pipeline.wait_for_frames()
-            depth_frame = frames.get_depth_frame()
-            color_frame = frames.get_color_frame()
+            aligned = align.process(frames)
+            depth_frame = aligned.get_depth_frame()
+            color_frame = aligned.get_color_frame()
             if not depth_frame or not color_frame:
                 continue
 
@@ -57,19 +92,22 @@ if __name__ == "__main__":
             annotated = results[0].plot()
 
             # Find the central coordinate of box person
-            central_coordinate = find_person(image = results, model = model)
+            central_coordinate = find_target(image = results, model = model, target=detect)
             if not central_coordinate:
-                print("No image captured.")
+                print("No target captured.")
                 continue
 
             # Find the distance of person (ROI mean)
             roi_distance = person_distance(coordinate = central_coordinate, window_size = 5, image = color_image)
 
+            # Convert to the Polar coordinate
+            r, azimuth, elevation = get_polar(central_coordinate, depth_frame, roi_distance)
+
             # Display with caption
             vis = annotated.copy()
-            txt = f"ROI distance of person is {roi_distance:.2f}m"
-            cv2.putText(vis, txt, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,0,0), 3)
-            cv2.imshow('annotated', vis)
+            txt = f"ROI distance of {detect} is {r:.2f}m, azimuth: {azimuth:.2f}, elevation: {elevation:.2f}"
+            cv2.putText(vis, txt, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,0,0), 1)
+            cv2.imshow('Camera', vis)
             if cv2.waitKey(1) == 27:
                 break
     

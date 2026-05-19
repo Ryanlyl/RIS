@@ -1,0 +1,500 @@
+2026-05-15 19:34:59.894 - TLKCoreService - INFO : ========= TLKService v2.4.8 - local =========
+2026-05-15 19:34:59.894 - TLKCoreService - INFO : Working Root directory: E:/GithubDoc/RIS
+2026-05-15 19:34:59.894 - TLKCoreService - INFO : Files        directory: E:/GithubDoc/RIS/files
+2026-05-15 19:34:59.894 - TLKCoreService - INFO : Log file     directory: E:/GithubDoc/RIS/tlk_core_log
+2026-05-15 19:34:59.894 - TLKCoreService - INFO : Init successfully
+2026-05-15 19:34:59.894 - Comm - INFO : ========= TMYCommService v1.1.5 =========
+2026-05-15 19:34:59.910 - Comm - INFO : Scan device via: DevInterface.LAN
+2026-05-15 19:34:59.910 - Comm - INFO : Scan LAN
+2026-05-15 19:34:59.959 - Comm - DEBUG : [UP] snicaddr(family=<AddressFamily.AF_INET: 2>, address='10.91.113.239', netmask='255.255.0.0', broadcast=None, ptp=None)
+2026-05-15 19:34:59.959 - Comm - DEBUG : [UP] snicaddr(family=<AddressFamily.AF_INET: 2>, address='192.168.100.50', netmask='255.255.255.0', broadcast=None, ptp=None)
+2026-05-15 19:34:59.991 - Comm - INFO : [192.168.100.50] Recv info from: 192.168.100.114
+2026-05-15 19:35:00.102 - Comm - DEBUG : [10.91.113.239] UDP Timeout at the count:  0
+2026-05-15 19:35:02.114 - Comm - DEBUG : [192.168.100.50] UDP Timeout at the count: 19
+2026-05-15 19:35:02.225 - Comm - DEBUG : [10.91.113.239] UDP Timeout at the count: 19
+2026-05-15 19:35:02.225 - Comm - DEBUG : [10.91.113.239] Found nothing
+2026-05-15 19:35:02.225 - TLKCoreService - DEBUG : [_parseScanedResult] SN          : RIS-2504012-0000
+2026-05-15 19:35:02.225 - TLKCoreService - DEBUG : [_parseScanedResult] ADDRESS     : 192.168.100.114
+2026-05-15 19:35:02.225 - TLKCoreService - DEBUG : [_parseScanedResult] DEVICE_TYPE : 28
+2026-05-15 19:35:02.225 - TLKCoreService - DEBUG : [_parseScanedResult] DFU_STATUS  : False
+2026-05-15 19:35:02.225 - TLKCoreService - DEBUG : Loading RISController from: <module 'tlkcore.tmydev.DevRIS' from 'E:\\GithubDoc\\RIS\\.venv\\Lib\\site-packages\\tlkcore\\tmydev\\DevRIS.cp311-win_amd64.pyd'> dir : ['Device', 'IPMode', 'MAX_MEMORY_PATTERNS_INDEX', 'Optional', 'RISController', 'RISRdtool', 'RIS_Dir', 'RIS_ModuleConfig', 'RetCode', 'RetType', 'RspType', 'Union', 'VER', '__builtins__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '__test__', 'importlib', 'json', 'ris_cal', 'struct']
+2026-05-15 19:35:02.225 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:02.240 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:02.240 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:02.247 - Device - INFO : General device init
+2026-05-15 19:35:02.247 - Device - INFO : SN          : RIS-2504012-0000
+2026-05-15 19:35:02.247 - Device - INFO : ADDRESS     : 192.168.100.114
+2026-05-15 19:35:02.247 - Device - INFO : DEVICE_TYPE : 28
+2026-05-15 19:35:02.247 - Device - INFO : DEVICE_INTERFACE : LAN
+2026-05-15 19:35:02.247 - Device - DEBUG : DevRIS init
+2026-05-15 19:35:02.247 - Device - DEBUG : Calling dev_func: '_qFWVer()' with () and {}
+2026-05-15 19:35:02.247 - Device - DEBUG : cmd: GET_FW_VER
+2026-05-15 19:35:02.247 - Comm - DEBUG : [CMD][SEND] "GET_FW_VER"
+2026-05-15 19:35:02.247 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:02.247 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:02.247 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:35:02.247 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:02.272 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:02.272 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:02.278 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:02.278 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:02.278 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:35:02.278 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:02.303 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:02.303 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:02.309 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:02.309 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:02.309 - Device - INFO : TLK sendCmd time: 0.0627 seconds
+2026-05-15 19:35:02.309 - Device - INFO : [RIS-2504012-0000] _qFWVer(): [RetType] ERROR_SEND_CMD_TIMEOUT, TCP cmd exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:02.309 - Device - DEBUG : Calling dev_func: '_qHWVer()' with () and {}
+2026-05-15 19:35:02.309 - Device - DEBUG : cmd: GET_HW_VER
+2026-05-15 19:35:02.309 - Comm - DEBUG : [CMD][SEND] "GET_HW_VER"
+2026-05-15 19:35:02.309 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:35:02.309 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:02.319 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:02.319 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:02.325 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:02.325 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:02.325 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:35:02.325 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:02.335 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:02.335 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:02.341 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:02.341 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:02.341 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:35:02.341 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:02.351 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:02.351 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:02.358 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:02.358 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:02.358 - Device - INFO : TLK sendCmd time: 0.0483 seconds
+2026-05-15 19:35:02.358 - Device - INFO : [RIS-2504012-0000] _qHWVer(): [RetType] ERROR_SEND_CMD_TIMEOUT, TCP cmd exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:02.358 - TLKCoreService - DEBUG : Calling func: 'getDevTypeName()' with ('RIS-2504012-0000',) and {}
+2026-05-15 19:35:08.728 - TLKCoreService - DEBUG : Calling func: 'setRISPattern()' with ('RIS-2504012-0000', [[1, 0, 0, 1, 1, 0, 0, 1, 1, 0], [1, 0, 1, 1, 0, 0, 1, 1, 1, 0], [0, 0, 1, 1, 0, 0, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0, 1, 1, 0, 0], [0, 0, 1, 0, 0, 0, 1, 1, 0, 0], [0, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0]]) and {}
+2026-05-15 19:35:08.728 - TLKCoreService - ERROR : Exception from calling: setRISPattern
+Traceback (most recent call last):
+  File "tlkcore/TLKCoreService.py", line 223, in tlkcore.TLKCoreService.TLKCoreService.__getattr__.wrapper
+  File "tlkcore/tmydev/DevRIS.py", line 674, in tlkcore.tmydev.DevRIS.RISController.setRISPattern
+KeyError: '1'
+2026-05-15 19:35:10.228 - TLKCoreService - DEBUG : DeInit TLKCore Service
+2026-05-15 19:35:10.228 - TLKCoreService - DEBUG : DeInit for RIS-2504012-0000
+2026-05-15 19:35:10.228 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:10.228 - Device - DEBUG : Del object: RISController
+2026-05-15 19:35:21.149 - TLKCoreService - INFO : ========= TLKService v2.4.8 - local =========
+2026-05-15 19:35:21.165 - TLKCoreService - INFO : Working Root directory: E:/GithubDoc/RIS
+2026-05-15 19:35:21.165 - TLKCoreService - INFO : Files        directory: E:/GithubDoc/RIS/files
+2026-05-15 19:35:21.165 - TLKCoreService - INFO : Log file     directory: E:/GithubDoc/RIS/tlk_core_log
+2026-05-15 19:35:21.165 - TLKCoreService - INFO : Init successfully
+2026-05-15 19:35:21.165 - Comm - INFO : ========= TMYCommService v1.1.5 =========
+2026-05-15 19:35:21.165 - Comm - INFO : Scan device via: DevInterface.LAN
+2026-05-15 19:35:21.165 - Comm - INFO : Scan LAN
+2026-05-15 19:35:21.212 - Comm - DEBUG : [UP] snicaddr(family=<AddressFamily.AF_INET: 2>, address='10.91.113.239', netmask='255.255.0.0', broadcast=None, ptp=None)
+2026-05-15 19:35:21.212 - Comm - DEBUG : [UP] snicaddr(family=<AddressFamily.AF_INET: 2>, address='192.168.100.50', netmask='255.255.255.0', broadcast=None, ptp=None)
+2026-05-15 19:35:21.244 - Comm - INFO : [192.168.100.50] Recv info from: 192.168.100.114
+2026-05-15 19:35:21.357 - Comm - DEBUG : [10.91.113.239] UDP Timeout at the count:  0
+2026-05-15 19:35:23.359 - Comm - DEBUG : [192.168.100.50] UDP Timeout at the count: 19
+2026-05-15 19:35:23.473 - Comm - DEBUG : [10.91.113.239] UDP Timeout at the count: 19
+2026-05-15 19:35:23.473 - Comm - DEBUG : [10.91.113.239] Found nothing
+2026-05-15 19:35:23.473 - TLKCoreService - DEBUG : [_parseScanedResult] SN          : RIS-2504012-0000
+2026-05-15 19:35:23.473 - TLKCoreService - DEBUG : [_parseScanedResult] ADDRESS     : 192.168.100.114
+2026-05-15 19:35:23.473 - TLKCoreService - DEBUG : [_parseScanedResult] DEVICE_TYPE : 28
+2026-05-15 19:35:23.473 - TLKCoreService - DEBUG : [_parseScanedResult] DFU_STATUS  : False
+2026-05-15 19:35:23.473 - TLKCoreService - DEBUG : Loading RISController from: <module 'tlkcore.tmydev.DevRIS' from 'E:\\GithubDoc\\RIS\\.venv\\Lib\\site-packages\\tlkcore\\tmydev\\DevRIS.cp311-win_amd64.pyd'> dir : ['Device', 'IPMode', 'MAX_MEMORY_PATTERNS_INDEX', 'Optional', 'RISController', 'RISRdtool', 'RIS_Dir', 'RIS_ModuleConfig', 'RetCode', 'RetType', 'RspType', 'Union', 'VER', '__builtins__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '__test__', 'importlib', 'json', 'ris_cal', 'struct']
+2026-05-15 19:35:23.473 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:23.488 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:23.488 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:23.494 - Device - INFO : General device init
+2026-05-15 19:35:23.494 - Device - INFO : SN          : RIS-2504012-0000
+2026-05-15 19:35:23.494 - Device - INFO : ADDRESS     : 192.168.100.114
+2026-05-15 19:35:23.494 - Device - INFO : DEVICE_TYPE : 28
+2026-05-15 19:35:23.494 - Device - INFO : DEVICE_INTERFACE : LAN
+2026-05-15 19:35:23.494 - Device - DEBUG : DevRIS init
+2026-05-15 19:35:23.494 - Device - DEBUG : Calling dev_func: '_qFWVer()' with () and {}
+2026-05-15 19:35:23.494 - Device - DEBUG : cmd: GET_FW_VER
+2026-05-15 19:35:23.494 - Comm - DEBUG : [CMD][SEND] "GET_FW_VER"
+2026-05-15 19:35:23.494 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:23.494 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:23.494 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:35:23.494 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:23.494 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:23.494 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:23.504 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:23.504 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:23.504 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:35:23.504 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:23.504 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:23.504 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:23.515 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:23.515 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:23.515 - Device - INFO : TLK sendCmd time: 0.0218 seconds
+2026-05-15 19:35:23.515 - Device - INFO : [RIS-2504012-0000] _qFWVer(): [RetType] ERROR_SEND_CMD_TIMEOUT, TCP cmd exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:23.515 - Device - DEBUG : Calling dev_func: '_qHWVer()' with () and {}
+2026-05-15 19:35:23.515 - Device - DEBUG : cmd: GET_HW_VER
+2026-05-15 19:35:23.515 - Comm - DEBUG : [CMD][SEND] "GET_HW_VER"
+2026-05-15 19:35:23.515 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:35:23.515 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:23.536 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:23.536 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:23.542 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:23.542 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:23.542 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:35:23.542 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:23.568 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:23.568 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:23.574 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:23.574 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:23.574 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:35:23.574 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:35:23.600 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:35:23.600 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:35:23.606 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:23.606 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:23.606 - Device - INFO : TLK sendCmd time: 0.0912 seconds
+2026-05-15 19:35:23.606 - Device - INFO : [RIS-2504012-0000] _qHWVer(): [RetType] ERROR_SEND_CMD_TIMEOUT, TCP cmd exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:35:23.606 - TLKCoreService - DEBUG : Calling func: 'getDevTypeName()' with ('RIS-2504012-0000',) and {}
+2026-05-15 19:35:29.422 - TLKCoreService - DEBUG : Calling func: 'setRISPattern()' with ('RIS-2504012-0000', [[0, 0, 1, 1, 0, 0, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0, 1, 1, 0, 0], [0, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 1], [0, 1, 1, 0, 0, 1, 1, 0, 0, 1], [0, 1, 0, 0, 1, 1, 1, 0, 0, 1], [1, 1, 0, 0, 1, 1, 0, 0, 0, 1], [1, 1, 0, 0, 1, 1, 0, 0, 0, 1], [1, 1, 0, 0, 1, 1, 0, 0, 0, 1]]) and {}
+2026-05-15 19:35:29.422 - TLKCoreService - ERROR : Exception from calling: setRISPattern
+Traceback (most recent call last):
+  File "tlkcore/TLKCoreService.py", line 223, in tlkcore.TLKCoreService.TLKCoreService.__getattr__.wrapper
+  File "tlkcore/tmydev/DevRIS.py", line 674, in tlkcore.tmydev.DevRIS.RISController.setRISPattern
+KeyError: '1'
+2026-05-15 19:35:30.919 - TLKCoreService - DEBUG : DeInit TLKCore Service
+2026-05-15 19:35:30.919 - TLKCoreService - DEBUG : DeInit for RIS-2504012-0000
+2026-05-15 19:35:30.919 - Comm - DEBUG : Closed socket
+2026-05-15 19:35:30.919 - Device - DEBUG : Del object: RISController
+2026-05-15 19:36:41.576 - TLKCoreService - INFO : ========= TLKService v2.4.8 - local =========
+2026-05-15 19:36:41.576 - TLKCoreService - INFO : Working Root directory: E:/GithubDoc/RIS
+2026-05-15 19:36:41.576 - TLKCoreService - INFO : Files        directory: E:/GithubDoc/RIS/files
+2026-05-15 19:36:41.576 - TLKCoreService - INFO : Log file     directory: E:/GithubDoc/RIS/tlk_core_log
+2026-05-15 19:36:41.576 - TLKCoreService - INFO : Init successfully
+2026-05-15 19:36:41.576 - Comm - INFO : ========= TMYCommService v1.1.5 =========
+2026-05-15 19:36:41.576 - Comm - INFO : Scan device via: DevInterface.LAN
+2026-05-15 19:36:41.576 - Comm - INFO : Scan LAN
+2026-05-15 19:36:41.625 - Comm - DEBUG : [UP] snicaddr(family=<AddressFamily.AF_INET: 2>, address='10.91.113.239', netmask='255.255.0.0', broadcast=None, ptp=None)
+2026-05-15 19:36:41.625 - Comm - DEBUG : [UP] snicaddr(family=<AddressFamily.AF_INET: 2>, address='192.168.100.50', netmask='255.255.255.0', broadcast=None, ptp=None)
+2026-05-15 19:36:41.657 - Comm - INFO : [192.168.100.50] Recv info from: 192.168.100.114
+2026-05-15 19:36:41.769 - Comm - DEBUG : [10.91.113.239] UDP Timeout at the count:  0
+2026-05-15 19:36:43.780 - Comm - DEBUG : [192.168.100.50] UDP Timeout at the count: 19
+2026-05-15 19:36:43.891 - Comm - DEBUG : [10.91.113.239] UDP Timeout at the count: 19
+2026-05-15 19:36:43.891 - Comm - DEBUG : [10.91.113.239] Found nothing
+2026-05-15 19:36:43.891 - TLKCoreService - DEBUG : [_parseScanedResult] SN          : RIS-2504012-0000
+2026-05-15 19:36:43.891 - TLKCoreService - DEBUG : [_parseScanedResult] ADDRESS     : 192.168.100.114
+2026-05-15 19:36:43.891 - TLKCoreService - DEBUG : [_parseScanedResult] DEVICE_TYPE : 28
+2026-05-15 19:36:43.891 - TLKCoreService - DEBUG : [_parseScanedResult] DFU_STATUS  : False
+2026-05-15 19:36:43.891 - TLKCoreService - DEBUG : Loading RISController from: <module 'tlkcore.tmydev.DevRIS' from 'E:\\GithubDoc\\RIS\\.venv\\Lib\\site-packages\\tlkcore\\tmydev\\DevRIS.cp311-win_amd64.pyd'> dir : ['Device', 'IPMode', 'MAX_MEMORY_PATTERNS_INDEX', 'Optional', 'RISController', 'RISRdtool', 'RIS_Dir', 'RIS_ModuleConfig', 'RetCode', 'RetType', 'RspType', 'Union', 'VER', '__builtins__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '__test__', 'importlib', 'json', 'ris_cal', 'struct']
+2026-05-15 19:36:43.891 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:36:43.891 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:36:43.891 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:36:43.901 - Device - INFO : General device init
+2026-05-15 19:36:43.901 - Device - INFO : SN          : RIS-2504012-0000
+2026-05-15 19:36:43.901 - Device - INFO : ADDRESS     : 192.168.100.114
+2026-05-15 19:36:43.901 - Device - INFO : DEVICE_TYPE : 28
+2026-05-15 19:36:43.901 - Device - INFO : DEVICE_INTERFACE : LAN
+2026-05-15 19:36:43.901 - Device - DEBUG : DevRIS init
+2026-05-15 19:36:43.901 - Device - DEBUG : Calling dev_func: '_qFWVer()' with () and {}
+2026-05-15 19:36:43.901 - Device - DEBUG : cmd: GET_FW_VER
+2026-05-15 19:36:43.901 - Comm - DEBUG : [CMD][SEND] "GET_FW_VER"
+2026-05-15 19:36:43.901 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:36:43.901 - Comm - DEBUG : Closed socket
+2026-05-15 19:36:43.901 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:36:43.901 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:36:43.923 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:36:43.923 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:36:43.929 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:36:43.929 - Comm - DEBUG : Closed socket
+2026-05-15 19:36:43.929 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:36:43.929 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:36:43.939 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:36:43.939 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:36:43.945 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:36:43.945 - Comm - DEBUG : Closed socket
+2026-05-15 19:36:43.945 - Device - INFO : TLK sendCmd time: 0.0444 seconds
+2026-05-15 19:36:43.945 - Device - INFO : [RIS-2504012-0000] _qFWVer(): [RetType] ERROR_SEND_CMD_TIMEOUT, TCP cmd exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:36:43.945 - Device - DEBUG : Calling dev_func: '_qHWVer()' with () and {}
+2026-05-15 19:36:43.945 - Device - DEBUG : cmd: GET_HW_VER
+2026-05-15 19:36:43.945 - Comm - DEBUG : [CMD][SEND] "GET_HW_VER"
+2026-05-15 19:36:43.945 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:36:43.945 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:36:43.955 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:36:43.955 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:36:43.960 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:36:43.960 - Comm - DEBUG : Closed socket
+2026-05-15 19:36:43.960 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:36:43.960 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:36:43.971 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:36:43.971 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:36:43.977 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:36:43.977 - Comm - DEBUG : Closed socket
+2026-05-15 19:36:43.977 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:36:43.977 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:36:43.977 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:36:43.977 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:36:43.986 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:36:43.986 - Comm - DEBUG : Closed socket
+2026-05-15 19:36:43.986 - Device - INFO : TLK sendCmd time: 0.0425 seconds
+2026-05-15 19:36:43.986 - Device - INFO : [RIS-2504012-0000] _qHWVer(): [RetType] ERROR_SEND_CMD_TIMEOUT, TCP cmd exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:36:43.986 - TLKCoreService - DEBUG : Calling func: 'getDevTypeName()' with ('RIS-2504012-0000',) and {}
+2026-05-15 19:36:49.987 - TLKCoreService - DEBUG : Calling func: 'setRISPattern()' with ('RIS-2504012-0000', {2: [[0, 0, 1, 1, 0, 0, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0, 1, 1, 0, 0], [0, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 1], [0, 1, 1, 0, 0, 1, 1, 0, 0, 1], [0, 1, 0, 0, 1, 1, 1, 0, 0, 1], [1, 1, 0, 0, 1, 1, 0, 0, 0, 1], [1, 1, 0, 0, 1, 1, 0, 0, 0, 1], [1, 1, 0, 0, 1, 1, 0, 0, 0, 1]]}) and {}
+2026-05-15 19:36:49.987 - TLKCoreService - ERROR : Exception from calling: setRISPattern
+Traceback (most recent call last):
+  File "tlkcore/TLKCoreService.py", line 223, in tlkcore.TLKCoreService.TLKCoreService.__getattr__.wrapper
+  File "tlkcore/tmydev/DevRIS.py", line 674, in tlkcore.tmydev.DevRIS.RISController.setRISPattern
+KeyError: '2'
+2026-05-15 19:36:51.487 - TLKCoreService - DEBUG : DeInit TLKCore Service
+2026-05-15 19:36:51.487 - TLKCoreService - DEBUG : DeInit for RIS-2504012-0000
+2026-05-15 19:36:51.487 - Comm - DEBUG : Closed socket
+2026-05-15 19:36:51.487 - Device - DEBUG : Del object: RISController
+2026-05-15 19:37:01.425 - TLKCoreService - INFO : ========= TLKService v2.4.8 - local =========
+2026-05-15 19:37:01.425 - TLKCoreService - INFO : Working Root directory: E:/GithubDoc/RIS
+2026-05-15 19:37:01.425 - TLKCoreService - INFO : Files        directory: E:/GithubDoc/RIS/files
+2026-05-15 19:37:01.425 - TLKCoreService - INFO : Log file     directory: E:/GithubDoc/RIS/tlk_core_log
+2026-05-15 19:37:01.425 - TLKCoreService - INFO : Init successfully
+2026-05-15 19:37:01.425 - Comm - INFO : ========= TMYCommService v1.1.5 =========
+2026-05-15 19:37:01.425 - Comm - INFO : Scan device via: DevInterface.LAN
+2026-05-15 19:37:01.425 - Comm - INFO : Scan LAN
+2026-05-15 19:37:01.489 - Comm - DEBUG : [UP] snicaddr(family=<AddressFamily.AF_INET: 2>, address='10.91.113.239', netmask='255.255.0.0', broadcast=None, ptp=None)
+2026-05-15 19:37:01.489 - Comm - DEBUG : [UP] snicaddr(family=<AddressFamily.AF_INET: 2>, address='192.168.100.50', netmask='255.255.255.0', broadcast=None, ptp=None)
+2026-05-15 19:37:01.521 - Comm - INFO : [192.168.100.50] Recv info from: 192.168.100.114
+2026-05-15 19:37:01.617 - Comm - DEBUG : [10.91.113.239] UDP Timeout at the count:  0
+2026-05-15 19:37:03.653 - Comm - DEBUG : [192.168.100.50] UDP Timeout at the count: 19
+2026-05-15 19:37:03.734 - Comm - DEBUG : [10.91.113.239] UDP Timeout at the count: 19
+2026-05-15 19:37:03.734 - Comm - DEBUG : [10.91.113.239] Found nothing
+2026-05-15 19:37:03.734 - TLKCoreService - DEBUG : [_parseScanedResult] SN          : RIS-2504012-0000
+2026-05-15 19:37:03.734 - TLKCoreService - DEBUG : [_parseScanedResult] ADDRESS     : 192.168.100.114
+2026-05-15 19:37:03.734 - TLKCoreService - DEBUG : [_parseScanedResult] DEVICE_TYPE : 28
+2026-05-15 19:37:03.734 - TLKCoreService - DEBUG : [_parseScanedResult] DFU_STATUS  : False
+2026-05-15 19:37:03.734 - TLKCoreService - DEBUG : Loading RISController from: <module 'tlkcore.tmydev.DevRIS' from 'E:\\GithubDoc\\RIS\\.venv\\Lib\\site-packages\\tlkcore\\tmydev\\DevRIS.cp311-win_amd64.pyd'> dir : ['Device', 'IPMode', 'MAX_MEMORY_PATTERNS_INDEX', 'Optional', 'RISController', 'RISRdtool', 'RIS_Dir', 'RIS_ModuleConfig', 'RetCode', 'RetType', 'RspType', 'Union', 'VER', '__builtins__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '__test__', 'importlib', 'json', 'ris_cal', 'struct']
+2026-05-15 19:37:03.734 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:03.750 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:03.750 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:03.757 - Device - INFO : General device init
+2026-05-15 19:37:03.757 - Device - INFO : SN          : RIS-2504012-0000
+2026-05-15 19:37:03.757 - Device - INFO : ADDRESS     : 192.168.100.114
+2026-05-15 19:37:03.757 - Device - INFO : DEVICE_TYPE : 28
+2026-05-15 19:37:03.757 - Device - INFO : DEVICE_INTERFACE : LAN
+2026-05-15 19:37:03.757 - Device - DEBUG : DevRIS init
+2026-05-15 19:37:03.757 - Device - DEBUG : Calling dev_func: '_qFWVer()' with () and {}
+2026-05-15 19:37:03.757 - Device - DEBUG : cmd: GET_FW_VER
+2026-05-15 19:37:03.757 - Comm - DEBUG : [CMD][SEND] "GET_FW_VER"
+2026-05-15 19:37:03.757 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:03.757 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:03.757 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:37:03.757 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:03.757 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:03.757 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:03.768 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:03.768 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:03.768 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:37:03.768 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:03.782 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:03.782 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:03.788 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:03.788 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:03.788 - Device - INFO : TLK sendCmd time: 0.0310 seconds
+2026-05-15 19:37:03.788 - Device - INFO : [RIS-2504012-0000] _qFWVer(): [RetType] ERROR_SEND_CMD_TIMEOUT, TCP cmd exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:03.788 - Device - DEBUG : Calling dev_func: '_qHWVer()' with () and {}
+2026-05-15 19:37:03.788 - Device - DEBUG : cmd: GET_HW_VER
+2026-05-15 19:37:03.788 - Comm - DEBUG : [CMD][SEND] "GET_HW_VER"
+2026-05-15 19:37:03.788 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:37:03.788 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:03.798 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:03.798 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:03.804 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:03.804 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:03.804 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:37:03.804 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:03.814 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:03.814 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:03.820 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:03.820 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:03.820 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:37:03.820 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:03.820 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:03.820 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:03.828 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:03.828 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:03.828 - Device - INFO : TLK sendCmd time: 0.0388 seconds
+2026-05-15 19:37:03.828 - Device - INFO : [RIS-2504012-0000] _qHWVer(): [RetType] ERROR_SEND_CMD_TIMEOUT, TCP cmd exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:03.828 - TLKCoreService - DEBUG : Calling func: 'getDevTypeName()' with ('RIS-2504012-0000',) and {}
+2026-05-15 19:37:09.665 - TLKCoreService - DEBUG : Calling func: 'setRISPattern()' with ('RIS-2504012-0000', [[0, 0, 1, 1, 0, 0, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0, 1, 1, 0, 0], [0, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 1], [0, 1, 1, 0, 0, 1, 1, 0, 0, 1], [0, 1, 0, 0, 1, 1, 1, 0, 0, 1], [1, 1, 0, 0, 1, 1, 0, 0, 0, 1], [1, 1, 0, 0, 1, 1, 0, 0, 0, 1], [1, 1, 0, 0, 1, 1, 0, 0, 0, 1]]) and {}
+2026-05-15 19:37:09.665 - TLKCoreService - ERROR : Exception from calling: setRISPattern
+Traceback (most recent call last):
+  File "tlkcore/TLKCoreService.py", line 223, in tlkcore.TLKCoreService.TLKCoreService.__getattr__.wrapper
+  File "tlkcore/tmydev/DevRIS.py", line 674, in tlkcore.tmydev.DevRIS.RISController.setRISPattern
+KeyError: '1'
+2026-05-15 19:37:11.156 - TLKCoreService - DEBUG : DeInit TLKCore Service
+2026-05-15 19:37:11.156 - TLKCoreService - DEBUG : DeInit for RIS-2504012-0000
+2026-05-15 19:37:11.156 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:11.156 - Device - DEBUG : Del object: RISController
+2026-05-15 19:37:46.800 - TLKCoreService - INFO : ========= TLKService v2.4.8 - local =========
+2026-05-15 19:37:46.800 - TLKCoreService - INFO : Working Root directory: E:/GithubDoc/RIS
+2026-05-15 19:37:46.800 - TLKCoreService - INFO : Files        directory: E:/GithubDoc/RIS/files
+2026-05-15 19:37:46.800 - TLKCoreService - INFO : Log file     directory: E:/GithubDoc/RIS/tlk_core_log
+2026-05-15 19:37:46.800 - TLKCoreService - INFO : Init successfully
+2026-05-15 19:37:46.800 - Comm - INFO : ========= TMYCommService v1.1.5 =========
+2026-05-15 19:37:46.800 - Comm - INFO : Scan device via: DevInterface.LAN
+2026-05-15 19:37:46.800 - Comm - INFO : Scan LAN
+2026-05-15 19:37:46.848 - Comm - DEBUG : [UP] snicaddr(family=<AddressFamily.AF_INET: 2>, address='10.91.113.239', netmask='255.255.0.0', broadcast=None, ptp=None)
+2026-05-15 19:37:46.848 - Comm - DEBUG : [UP] snicaddr(family=<AddressFamily.AF_INET: 2>, address='192.168.100.50', netmask='255.255.255.0', broadcast=None, ptp=None)
+2026-05-15 19:37:46.887 - Comm - INFO : [192.168.100.50] Recv info from: 192.168.100.114
+2026-05-15 19:37:46.991 - Comm - DEBUG : [10.91.113.239] UDP Timeout at the count:  0
+2026-05-15 19:37:49. 16 - Comm - DEBUG : [192.168.100.50] UDP Timeout at the count: 19
+2026-05-15 19:37:49.127 - Comm - DEBUG : [10.91.113.239] UDP Timeout at the count: 19
+2026-05-15 19:37:49.127 - Comm - DEBUG : [10.91.113.239] Found nothing
+2026-05-15 19:37:49.127 - TLKCoreService - DEBUG : [_parseScanedResult] SN          : RIS-2504012-0000
+2026-05-15 19:37:49.127 - TLKCoreService - DEBUG : [_parseScanedResult] ADDRESS     : 192.168.100.114
+2026-05-15 19:37:49.127 - TLKCoreService - DEBUG : [_parseScanedResult] DEVICE_TYPE : 28
+2026-05-15 19:37:49.127 - TLKCoreService - DEBUG : [_parseScanedResult] DFU_STATUS  : False
+2026-05-15 19:37:49.127 - TLKCoreService - DEBUG : Loading RISController from: <module 'tlkcore.tmydev.DevRIS' from 'E:\\GithubDoc\\RIS\\.venv\\Lib\\site-packages\\tlkcore\\tmydev\\DevRIS.cp311-win_amd64.pyd'> dir : ['Device', 'IPMode', 'MAX_MEMORY_PATTERNS_INDEX', 'Optional', 'RISController', 'RISRdtool', 'RIS_Dir', 'RIS_ModuleConfig', 'RetCode', 'RetType', 'RspType', 'Union', 'VER', '__builtins__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '__test__', 'importlib', 'json', 'ris_cal', 'struct']
+2026-05-15 19:37:49.127 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:49.143 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:49.143 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:49.149 - Device - INFO : General device init
+2026-05-15 19:37:49.149 - Device - INFO : SN          : RIS-2504012-0000
+2026-05-15 19:37:49.149 - Device - INFO : ADDRESS     : 192.168.100.114
+2026-05-15 19:37:49.149 - Device - INFO : DEVICE_TYPE : 28
+2026-05-15 19:37:49.149 - Device - INFO : DEVICE_INTERFACE : LAN
+2026-05-15 19:37:49.149 - Device - DEBUG : DevRIS init
+2026-05-15 19:37:49.149 - Device - DEBUG : Calling dev_func: '_qFWVer()' with () and {}
+2026-05-15 19:37:49.149 - Device - DEBUG : cmd: GET_FW_VER
+2026-05-15 19:37:49.149 - Comm - DEBUG : [CMD][SEND] "GET_FW_VER"
+2026-05-15 19:37:49.149 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:49.149 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:49.149 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:37:49.149 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:49.175 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:49.175 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:49.180 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:49.180 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:49.180 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:37:49.180 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:49.207 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:49.207 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:49.213 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:49.213 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:49.213 - Device - INFO : TLK sendCmd time: 0.0638 seconds
+2026-05-15 19:37:49.213 - Device - INFO : [RIS-2504012-0000] _qFWVer(): [RetType] ERROR_SEND_CMD_TIMEOUT, TCP cmd exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:49.213 - Device - DEBUG : Calling dev_func: '_qHWVer()' with () and {}
+2026-05-15 19:37:49.213 - Device - DEBUG : cmd: GET_HW_VER
+2026-05-15 19:37:49.213 - Comm - DEBUG : [CMD][SEND] "GET_HW_VER"
+2026-05-15 19:37:49.213 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:37:49.213 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:49.238 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:49.238 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:49.244 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:49.244 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:49.244 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:37:49.244 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:49.270 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:49.270 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:49.276 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:49.276 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:49.276 - Comm - INFO : Socket disconnected, reconnecting
+2026-05-15 19:37:49.276 - Comm - DEBUG : Setting timeout to 3 sec
+2026-05-15 19:37:49.302 - Comm - INFO : 0) TCP connected to 192.168.100.114:5025
+2026-05-15 19:37:49.302 - Comm - DEBUG : [Windows] Setting TCP keepalive: idle=10s, interval=5s
+2026-05-15 19:37:49.308 - Comm - ERROR : [WinError 10054] 远程主机强迫关闭了一个现有的连接。, trying to disconnect then reconnnect
+Traceback (most recent call last):
+  File "tlkcore/TMYCommService.py", line 686, in tlkcore.TMYCommService._TCPConn.__sendOneCmd
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:49.308 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:49.308 - Device - INFO : TLK sendCmd time: 0.0947 seconds
+2026-05-15 19:37:49.308 - Device - INFO : [RIS-2504012-0000] _qHWVer(): [RetType] ERROR_SEND_CMD_TIMEOUT, TCP cmd exception: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2026-05-15 19:37:49.308 - TLKCoreService - DEBUG : Calling func: 'getDevTypeName()' with ('RIS-2504012-0000',) and {}
+2026-05-15 19:37:55.283 - TLKCoreService - DEBUG : Calling func: 'setRISPattern()' with ('RIS-2504012-0000', [[1, 0, 0, 1, 1, 0, 0, 1, 1, 0], [1, 0, 1, 1, 0, 0, 1, 1, 1, 0], [0, 0, 1, 1, 0, 0, 1, 1, 0, 0], [0, 0, 1, 1, 0, 0, 1, 1, 0, 0], [0, 0, 1, 0, 0, 0, 1, 1, 0, 0], [0, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 0, 0, 1, 1, 0, 0, 0]]) and {}
+2026-05-15 19:37:55.283 - TLKCoreService - ERROR : Exception from calling: setRISPattern
+Traceback (most recent call last):
+  File "tlkcore/TLKCoreService.py", line 223, in tlkcore.TLKCoreService.TLKCoreService.__getattr__.wrapper
+  File "tlkcore/tmydev/DevRIS.py", line 674, in tlkcore.tmydev.DevRIS.RISController.setRISPattern
+KeyError: '1'
+2026-05-15 19:37:56.786 - TLKCoreService - DEBUG : DeInit TLKCore Service
+2026-05-15 19:37:56.786 - TLKCoreService - DEBUG : DeInit for RIS-2504012-0000
+2026-05-15 19:37:56.786 - Comm - DEBUG : Closed socket
+2026-05-15 19:37:56.786 - Device - DEBUG : Del object: RISController
